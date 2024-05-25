@@ -42,12 +42,12 @@ horseremote = game:GetService("ReplicatedStorage").RE:FindFirstChild("1Hors1eRem
 
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "" }),
-    trol = Window:AddTab({ Title = "Troll Functions", Icon = "" })
-    tool = Window:AddTab({ Title = "Tool Functions", Icon = "" })
-    loclal = Window:AddTab({ Title = "LocalPlayer Functions", Icon = "" })
-    tp = Window:AddTab({ Title = "Teleport Functions", Icon = "" })
-    anti = Window:AddTab({ Title = "Anti Functions", Icon = "" })
-    server = Window:AddTab({ Title = "Server Functions", Icon = "" })
+    trol = Window:AddTab({ Title = "Troll Functions", Icon = "" }),
+    tool = Window:AddTab({ Title = "Tool Functions", Icon = "" }),
+    loclal = Window:AddTab({ Title = "LocalPlayer Functions", Icon = "" }),
+    tp = Window:AddTab({ Title = "Teleport Functions", Icon = "" }),
+    anti = Window:AddTab({ Title = "Anti Functions", Icon = "" }),
+    server = Window:AddTab({ Title = "Server Functions", Icon = "" }),
     Setting = Window:AddTab({ Title = "Setting", Icon = "setting" })
 }
 
