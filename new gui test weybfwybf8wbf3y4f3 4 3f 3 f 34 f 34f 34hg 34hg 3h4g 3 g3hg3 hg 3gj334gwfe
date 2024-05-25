@@ -244,6 +244,7 @@ do
                     wait()
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcf
                 end
+            end
         end
     })
     
