@@ -8,7 +8,7 @@ local plrlel = {}
 
 for i,v in pairs(game:GetService("Players"):GetPlayers()) do
 	if v.Name == game.Players.LocalPlayer.Name == false then
-    		table.insert(plrlel,v.Name)
+    	table.insert(plrlel,v.Name)
 	end
 end
 
@@ -93,7 +93,7 @@ do
         Title = "Select Player",
         wefwefasdasd = plrlel,
         Multi = false,
-        Default = 1,
+        Default = 0,
     })
 
     Dropdown:OnChanged(function(wefwefasdasd)
