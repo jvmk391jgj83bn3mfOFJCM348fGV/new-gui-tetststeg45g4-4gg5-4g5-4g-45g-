@@ -2,11 +2,13 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
+--[[Get Players]]
+
 local plrlel = {}
 
 for i,v in pairs(game:GetService("Players"):GetPlayers()) do
 	if v.Name == game.Players.LocalPlayer.Name == false then
-    	table.insert(plrlel,v.Name)
+    		table.insert(plrlel,v.Name)
 	end
 end
 
@@ -248,9 +250,9 @@ do
                     wait()
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcf
                 end
-            end
         end
     })
+end
     
 
 
@@ -276,7 +278,7 @@ elseif workin == false then
             Content = "Status: Patched!"
         })
     
-    
+    end
     
     SaveManager:LoadAutoloadConfig()
 end
