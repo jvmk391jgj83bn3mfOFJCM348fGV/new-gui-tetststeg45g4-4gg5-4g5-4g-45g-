@@ -105,7 +105,7 @@ do
                             for m=1,2 do task.wait()
                             game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").WorkspaceCom["001_GiveTools"].FireX.CFrame + Vector3.new(0,-15,0)
                             end
-                            task.wait()
+                            task.wait(0.2)
                             game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
                             for i=1, 1350 do task.wait()
                             fireclickdetector(game:GetService("Workspace").WorkspaceCom["001_GiveTools"].FireX.ClickDetector,0)
@@ -135,6 +135,7 @@ do
             })
         end
     })
+
 end
 
 
