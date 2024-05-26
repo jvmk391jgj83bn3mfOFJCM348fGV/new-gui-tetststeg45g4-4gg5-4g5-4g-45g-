@@ -162,12 +162,11 @@ do
 
     local Input = Tabs.tool:AddInput("Input", {
         Title = "Dupe Amount",
-        Default = "",
+        Default = "..",
         Placeholder = "Placeholder",
         Numeric = true,
         Finished = true,
-        Callback = function(efwefasdasddvsszvxzx)
-            dupeamot = efwefasdasddvsszvxzx
+        Callback = function(dupeamot)
         end
     })
 
