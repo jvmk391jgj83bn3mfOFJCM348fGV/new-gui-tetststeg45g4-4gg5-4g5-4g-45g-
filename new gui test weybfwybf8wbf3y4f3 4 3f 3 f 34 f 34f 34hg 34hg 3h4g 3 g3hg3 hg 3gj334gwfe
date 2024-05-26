@@ -282,11 +282,104 @@ do
         end
     })
 
-    Tabs.Main:AddButton({
+    Tabs.tool:AddButton({
         Title = "Stop Duping Tool",
         Description = "",
         Callback = function()
             duping = false
+        end
+    })
+
+    Tabs.tool:AddParagraph({
+        Title = "Manual Grip Tools",
+        Content = ""
+    })
+
+    local MultiDropdown = Tabs.tool:AddDropdown("MultiDropdown", {
+        Title = "Select Angle",
+        Description = "You can select multiple values.",
+        Values = {"X", "Y", "Z"},
+        Multi = true,
+        Default = {""},
+    })
+
+    MultiDropdown:OnChanged(function(Value)
+        local Values = {}
+        for Value, State in next, Value do
+            table.insert(Values, Value)
+        end
+        gripangle = Values
+    end)
+
+    local Input = Tabs.tool:AddInput("Input", {
+        Title = "Distant",
+        Default = "",
+        Placeholder = "Placeholder",
+        Numeric = true,
+        Finished = true,
+        Callback = function(gripdistantss)
+        end
+    })
+
+    Tabs.tool:AddButton({
+        Title = "Increase Grip Tools",
+        Description = "",
+        Callback = function()
+            if gripangle == {"X"} then
+                for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) then
+                    if asdawd:IsA("Tool") then
+                        asdawd.Grip = CFrame.new(gripdistantss,0,0)
+                        asdawd.Parent = game.Players.LocalPlayer.Backpack
+                        wait()
+                        asdawd.Parent = game.Players.LocalPlayer.Character
+                    end
+                end
+        elseif gripangle == {"Y"} then
+            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) then
+                if asdawd:IsA("Tool") then
+                    asdawd.Grip = CFrame.new(0,gripdistantss,0)
+                    asdawd.Parent = game.Players.LocalPlayer.Backpack
+                    wait()
+                    asdawd.Parent = game.Players.LocalPlayer.Character
+                end
+            end
+        elseif gripangle == {"Z"} then
+            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) then
+                if asdawd:IsA("Tool") then
+                    asdawd.Grip = CFrame.new(0,0,gripdistantss)
+                    asdawd.Parent = game.Players.LocalPlayer.Backpack
+                    wait()
+                    asdawd.Parent = game.Players.LocalPlayer.Character
+                end
+            end
+        elseif gripangle == {"X","Y"} or gripangle == {"Y","X"} then
+            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) then
+                if asdawd:IsA("Tool") then
+                    asdawd.Grip = CFrame.new(gripdistantss,gripdistantss,0)
+                    asdawd.Parent = game.Players.LocalPlayer.Backpack
+                    wait()
+                    asdawd.Parent = game.Players.LocalPlayer.Character
+                end
+            end 
+        elseif gripangle == {"Y","Z"} or gripangle == {"Z","Y"} then
+            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) then
+                if asdawd:IsA("Tool") then
+                    asdawd.Grip = CFrame.new(0,gripdistantss,gripdistantss)
+                    asdawd.Parent = game.Players.LocalPlayer.Backpack
+                    wait()
+                    asdawd.Parent = game.Players.LocalPlayer.Character
+                end
+            end  
+        elseif gripangle == {"X","Z"} or gripangle == {"Z","X"} then
+            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) then
+                if asdawd:IsA("Tool") then
+                    asdawd.Grip = CFrame.new(gripdistantss,0,gripdistantss)
+                    asdawd.Parent = game.Players.LocalPlayer.Backpack
+                    wait()
+                    asdawd.Parent = game.Players.LocalPlayer.Character
+                end
+            end  
+        end
         end
     })
 
