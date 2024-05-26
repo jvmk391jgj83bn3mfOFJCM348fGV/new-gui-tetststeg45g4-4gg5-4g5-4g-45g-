@@ -63,7 +63,7 @@ do
     Fluent:Notify({
         Title = "Notification",
         Content = "Script is loaded",
-        SubContent = "SubContent",
+        SubContent = "Have Funs!",
         Duration = 5
     })
 
@@ -85,174 +85,60 @@ do
     --[[Troll Tab Function]]
 
     Tabs.trol:AddParagraph({
-        Title = "Tool Troll",
+        Title = "OP Troll Function",
         Content = ""
     })
 
-    local Dropdown = Tabs.trol:AddDropdown("Dropdown", {
-        Title = "Select Player",
-        wefwefasdasd = plrlel,
-        Multi = false,
-    })
-
-    Dropdown:OnChanged(function(wefwefasdasd)
-        trolplauerslected = game.Players.wefwefasdasd
-    end)
-
-    local Dropdown = Tabs.trol:AddDropdown("Dropdown", {
-        Title = "Select Troll Method",
-        asdawdasdawdawdawd = {"None", "Kill", "Void Kill", "Bring", "Fling", "Void", "Swim", "Fire", "Smoke", "Stuck", "Sky Dive"},
-        Multi = false,
-        Default = 1,
-    })
-    
-    Dropdown:OnChanged(function(wefwefasdasd)
-        trolplatermetoud = asdawdasdawdawdawd
-    end)
-
-    Tabs.trol:AddButton({
-        Title = "Start Troll Function",
+    Tabs.Main:AddButton({
+        Title = "Disconnected All",
         Description = "",
         Callback = function()
-            if trolplatermetoud == "None" then return end
-            if trolplauerslected.Character.Humanoid.Sit then
-                Fluent:Notify({
-                    Title = "Notification",
-                    Content = "Player Are Sitting",
-                    SubContent = "SubContent",
-                    Duration = 5
-                })
-                return
-             end
-             oldcf = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-             wait()
-            local args = {
-                [1] = "ClearAllTools"
-            }
-            
-            cleartoolremote:FireServer(unpack(args))
-            wait(0.1)
-            local args = {
-				[1] = "PickingTools",
-				[2] = "Couch"
-			}
-			
-			picktoolremote:InvokeServer(unpack(args))
-            game.Players.LocalPlayer.Backpack:WaitForChild("Couch").Grip = CFrame.new(0, 2, -5)
-            wait()
-                repeat task.wait()
-                    pos.x = trolplauerslected.Character.HumanoidRootPart.Position.X
-                    pos.y = trolplauerslected.Character.HumanoidRootPart.Position.Y
-                    pos.z = trolplauerslected.Character.HumanoidRootPart.Position.Z
-                    pos.x = pos.x + trolplauerslected.Character.HumanoidRootPart.Velocity.X / 2
-                    pos.y = pos.y + trolplauerslected.Character.HumanoidRootPart.Velocity.Y / 2
-                    pos.z = pos.z + trolplauerslected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,-0.75,0)
-                    task.wait()
-                    pos.x = trolplauerslected.Character.HumanoidRootPart.Position.X
-                    pos.y = trolplauerslected.Character.HumanoidRootPart.Position.Y
-                    pos.z = trolplauerslected.Character.HumanoidRootPart.Position.Z
-                    pos.x = pos.x + trolplauerslected.Character.HumanoidRootPart.Velocity.X / 2
-                    pos.y = pos.y + trolplauerslected.Character.HumanoidRootPart.Velocity.Y / 2
-                    pos.z = pos.z + trolplauerslected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z))
-                    task.wait()
-                    pos.x = trolplauerslected.Character.HumanoidRootPart.Position.X
-                    pos.y = trolplauerslected.Character.HumanoidRootPart.Position.Y
-                    pos.z = trolplauerslected.Character.HumanoidRootPart.Position.Z
-                    pos.x = pos.x + trolplauerslected.Character.HumanoidRootPart.Velocity.X / 2
-                    pos.y = pos.y + trolplauerslected.Character.HumanoidRootPart.Velocity.Y / 2
-                    pos.z = pos.z + trolplauerslected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,1.5,-1)
-                    task.wait()
-                    pos.x = trolplauerslected.Character.HumanoidRootPart.Position.X
-                    pos.y = trolplauerslected.Character.HumanoidRootPart.Position.Y
-                    pos.z = trolplauerslected.Character.HumanoidRootPart.Position.Z
-                    pos.x = pos.x + trolplauerslected.Character.HumanoidRootPart.Velocity.X / 2
-                    pos.y = pos.y + trolplauerslected.Character.HumanoidRootPart.Velocity.Y / 2
-                    pos.z = pos.z + trolplauerslected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,-1.75,-0.6)
-                    task.wait()
-                    pos.x = trolplauerslected.Character.HumanoidRootPart.Position.X
-                    pos.y = trolplauerslected.Character.HumanoidRootPart.Position.Y
-                    pos.z = trolplauerslected.Character.HumanoidRootPart.Position.Z
-                    pos.x = pos.x + trolplauerslected.Character.HumanoidRootPart.Velocity.X / 2
-                    pos.y = pos.y + trolplauerslected.Character.HumanoidRootPart.Velocity.Y / 2
-                    pos.z = pos.z + trolplauerslected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,1.5,-2)
-                    task.wait()
-                    pos.x = trolplauerslected.Character.HumanoidRootPart.Position.X
-                    pos.y = trolplauerslected.Character.HumanoidRootPart.Position.Y
-                    pos.z = trolplauerslected.Character.HumanoidRootPart.Position.Z
-                    pos.x = pos.x + trolplauerslected.Character.HumanoidRootPart.Velocity.X / 2
-                    pos.y = pos.y + trolplauerslected.Character.HumanoidRootPart.Velocity.Y / 2
-                    pos.z = pos.z + trolplauerslected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,-1.75,-1)
-                    task.wait()
-                    pos.x = trolplauerslected.Character.HumanoidRootPart.Position.X
-                    pos.y = trolplauerslected.Character.HumanoidRootPart.Position.Y
-                    pos.z = trolplauerslected.Character.HumanoidRootPart.Position.Z
-                    pos.x = pos.x + trolplauerslected.Character.HumanoidRootPart.Velocity.X / 2
-                    pos.y = pos.y + trolplauerslected.Character.HumanoidRootPart.Velocity.Y / 2
-                    pos.z = pos.z + trolplauerslected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,-1,0)
-                    task.wait()
-                    pos.x = trolplauerslected.Character.HumanoidRootPart.Position.X
-                    pos.y = trolplauerslected.Character.HumanoidRootPart.Position.Y
-                    pos.z = trolplauerslected.Character.HumanoidRootPart.Position.Z
-                    pos.x = pos.x + trolplauerslected.Character.HumanoidRootPart.Velocity.X / 2
-                    pos.y = pos.y + trolplauerslected.Character.HumanoidRootPart.Velocity.Y / 2
-                    pos.z = pos.z + trolplauerslected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,1,0)
-                    task.wait()
-                    pos.x = trolplauerslected.Character.HumanoidRootPart.Position.X
-                    pos.y = trolplauerslected.Character.HumanoidRootPart.Position.Y
-                    pos.z = trolplauerslected.Character.HumanoidRootPart.Position.Z
-                    pos.x = pos.x + trolplauerslected.Character.HumanoidRootPart.Velocity.X / 2
-                    pos.y = pos.y + trolplauerslected.Character.HumanoidRootPart.Velocity.Y / 2
-                    pos.z = pos.z + trolplauerslected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,0,-1)
-                    task.wait()
-                    pos.x = trolplauerslected.Character.HumanoidRootPart.Position.X
-                    pos.y = trolplauerslected.Character.HumanoidRootPart.Position.Y
-                    pos.z = trolplauerslected.Character.HumanoidRootPart.Position.Z
-                    pos.x = pos.x + trolplauerslected.Character.HumanoidRootPart.Velocity.X / 2
-                    pos.y = pos.y + trolplauerslected.Character.HumanoidRootPart.Velocity.Y / 2
-                    pos.z = pos.z + trolplauerslected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,2.5,-1.5)
-                    task.wait()
-                    pos.x = trolplauerslected.Character.HumanoidRootPart.Position.X
-                    pos.y = trolplauerslected.Character.HumanoidRootPart.Position.Y
-                    pos.z = trolplauerslected.Character.HumanoidRootPart.Position.Z
-                    pos.x = pos.x + trolplauerslected.Character.HumanoidRootPart.Velocity.X / 2
-                    pos.y = pos.y + trolplauerslected.Character.HumanoidRootPart.Velocity.Y / 2
-                    pos.z = pos.z + trolplauerslected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,2.5,-2)
-                    task.wait()
-                    pos.x = trolplauerslected.Character.HumanoidRootPart.Position.X
-                    pos.y = trolplauerslected.Character.HumanoidRootPart.Position.Y
-                    pos.z = trolplauerslected.Character.HumanoidRootPart.Position.Z
-                    pos.x = pos.x + trolplauerslected.Character.HumanoidRootPart.Velocity.X / 2
-                    pos.y = pos.y + trolplauerslected.Character.HumanoidRootPart.Velocity.Y / 2
-                    pos.z = pos.z + trolplauerslected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,-0.2,0)
-                until trolplauerslected.Character.Sit
-                if trolplatermetoud == "Kill" then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,-450,0)
-                    wait(0.2)
-                    local args = {
-                        [1] = "PlayerWantsToDeleteTool",
-                        [2] = "Couch"
+            Window:Dialog({
+                Title = "Script",
+                Content = "Are you sure? This function can SHUTDOWN this server",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                            local args = {
+                                [1] = "ClearAllTools"
+                            }
+                            
+                            game:GetService("ReplicatedStorage").JK.TR:FindFirstChild("1Clea1rTool1s"):FireServer(unpack(args))
+                            for m=1,2 do task.wait()
+                            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").WorkspaceCom["001_GiveTools"].FireX.CFrame + Vector3.new(0,-15,0)
+                            end
+                            task.wait()
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+                            for i=1, 1350 do task.wait()
+                            fireclickdetector(game:GetService("Workspace").WorkspaceCom["001_GiveTools"].FireX.ClickDetector,0)
+                            if game:GetService("Players").LocalPlayer.Character:FindFirstChild("FireX") then 
+                                game.Players.LocalPlayer.Character.FireX:Destroy()
+                            end
+                            end
+                            wait(0.75)
+                            for asd,wef in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                                if wef:IsA("Tool") then
+                                    if wef.Name == "FireX" then
+                                        wef:Destroy()
+                                    end
+                                end
+                            end
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(99999,-475,99999)
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            return
+                        end
                     }
-                    
-                    cleartoolremote:FireServer(unpack(args))
-                    wait()
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcf
-                end
+                }
+            })
         end
     })
-end
-    
 
 
 SaveManager:LoadAutoloadConfig()
