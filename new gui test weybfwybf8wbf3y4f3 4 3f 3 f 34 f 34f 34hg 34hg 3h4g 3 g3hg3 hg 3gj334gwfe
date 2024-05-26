@@ -326,7 +326,7 @@ do
         Description = "",
         Callback = function()
             if gripangle == {"X"} then
-                for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) then
+                for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                     if asdawd:IsA("Tool") then
                         asdawd.Grip = CFrame.new(gripdistantss,0,0)
                         asdawd.Parent = game.Players.LocalPlayer.Backpack
@@ -335,7 +335,7 @@ do
                     end
                 end
         elseif gripangle == {"Y"} then
-            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) then
+            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(0,gripdistantss,0)
                     asdawd.Parent = game.Players.LocalPlayer.Backpack
@@ -344,7 +344,7 @@ do
                 end
             end
         elseif gripangle == {"Z"} then
-            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) then
+            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(0,0,gripdistantss)
                     asdawd.Parent = game.Players.LocalPlayer.Backpack
@@ -353,7 +353,7 @@ do
                 end
             end
         elseif gripangle == {"X","Y"} or gripangle == {"Y","X"} then
-            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) then
+            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(gripdistantss,gripdistantss,0)
                     asdawd.Parent = game.Players.LocalPlayer.Backpack
@@ -362,7 +362,7 @@ do
                 end
             end 
         elseif gripangle == {"Y","Z"} or gripangle == {"Z","Y"} then
-            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) then
+            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(0,gripdistantss,gripdistantss)
                     asdawd.Parent = game.Players.LocalPlayer.Backpack
@@ -371,7 +371,7 @@ do
                 end
             end  
         elseif gripangle == {"X","Z"} or gripangle == {"Z","X"} then
-            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) then
+            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(gripdistantss,0,gripdistantss)
                     asdawd.Parent = game.Players.LocalPlayer.Backpack
