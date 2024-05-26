@@ -93,7 +93,6 @@ do
         Title = "Select Player",
         wefwefasdasd = plrlel,
         Multi = false,
-        Default = 0,
     })
 
     Dropdown:OnChanged(function(wefwefasdasd)
