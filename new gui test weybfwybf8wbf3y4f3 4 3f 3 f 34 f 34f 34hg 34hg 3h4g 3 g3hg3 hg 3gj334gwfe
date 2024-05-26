@@ -2,30 +2,6 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
-local function shutdownserver()
-    oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-    game.workspace:FindFirstChild("Camera"):Destroy()
-    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").WorkspaceCom["001_GiveTools"].FireX.CFrame + Vector3.new(0,-15,0)
-    task.wait(0.2)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-    for i=1, 1350 do task.wait()
-    fireclickdetector(game:GetService("Workspace").WorkspaceCom["001_GiveTools"].FireX.ClickDetector,0)
-    if game:GetService("Players").LocalPlayer.Character:FindFirstChild("FireX") then 
-        game.Players.LocalPlayer.Character.FireX:Destroy()
-    end
-    end
-    wait(0.75)
-    for asd,wef in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-        if wef:IsA("Tool") then
-            if wef.Name == "FireX" then
-                wef:Destroy()
-            end
-        end
-    end
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(99999,-475,99999)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-end
-
 local function GetPlayerRoot(plrlefff)
     local PlayerRootPart = plrlefff.Character:FindFirstChild("HumanoidRootPart") or plrlefff.Character:FindFirstChild("UpperTorso")
     return PlayerRootPart
@@ -137,8 +113,27 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
-                            shutdownserver()
-                        end
+                            oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                            game.workspace:FindFirstChild("Camera"):Destroy()
+                            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").WorkspaceCom["001_GiveTools"].FireX.CFrame + Vector3.new(0,-15,0)
+                            task.wait(0.2)
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+                            for i=1, 1350 do task.wait()
+                            fireclickdetector(game:GetService("Workspace").WorkspaceCom["001_GiveTools"].FireX.ClickDetector,0)
+                            if game:GetService("Players").LocalPlayer.Character:FindFirstChild("FireX") then 
+                                game.Players.LocalPlayer.Character.FireX:Destroy()
+                            end
+                            end
+                            wait(0.75)
+                            for asd,wef in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                                if wef:IsA("Tool") then
+                                    if wef.Name == "FireX" then
+                                        wef:Destroy()
+                                    end
+                                end
+                            end
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(99999,-475,99999)
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false                        end
                     },
                     {
                         Title = "Cancel",
