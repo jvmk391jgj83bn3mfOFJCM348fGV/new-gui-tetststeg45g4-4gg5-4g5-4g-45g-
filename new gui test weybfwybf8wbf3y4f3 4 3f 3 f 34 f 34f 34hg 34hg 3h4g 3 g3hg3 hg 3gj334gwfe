@@ -27,7 +27,7 @@ local function shutdownserver()
 end
 
 local function GetPlayerRoot(plrlefff)
-    plrlefff.Character:FindFirstChild("HumanoidRootPart") or plrlefff.Character:FindFirstChild("UpperTorso")
+    local PlayerRootPart = plrlefff.Character:FindFirstChild("HumanoidRootPart") or plrlefff.Character:FindFirstChild("UpperTorso")
     return PlayerRootPart
 end
 
