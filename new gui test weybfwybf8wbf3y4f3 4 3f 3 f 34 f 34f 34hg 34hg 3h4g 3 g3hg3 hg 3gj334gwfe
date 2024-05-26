@@ -89,7 +89,7 @@ do
         Content = ""
     })
 
-    Tabs.Main:AddButton({
+    Tabs.trol:AddButton({
         Title = "Disconnected All",
         Description = "",
         Callback = function()
@@ -101,11 +101,7 @@ do
                         Title = "Confirm",
                         Callback = function()
                             oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                            local args = {
-                                [1] = "ClearAllTools"
-                            }
-                            
-                            game:GetService("ReplicatedStorage").JK.TR:FindFirstChild("1Clea1rTool1s"):FireServer(unpack(args))
+                            game.workspace:FindFirstChild("Camera"):Destroy()
                             for m=1,2 do task.wait()
                             game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").WorkspaceCom["001_GiveTools"].FireX.CFrame + Vector3.new(0,-15,0)
                             end
