@@ -333,7 +333,7 @@ do
         Title = "Increase Grip Tools (Equip Tool First)",
         Description = "",
         Callback = function()
-            if gripangle == {1, "X"} then
+            if gripangle == {"1", "X"} then
                 for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                     if asdawd:IsA("Tool") then
                         asdawd.Grip = CFrame.new(tonumber(gripdistantss),0,0)
@@ -342,7 +342,7 @@ do
                         asdawd.Parent = game.Players.LocalPlayer.Character
                     end
                 end
-        elseif gripangle == {1, "Y"} then
+        elseif gripangle == {"Y"} then
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(0,tonumber(gripdistantss),0)
@@ -351,7 +351,7 @@ do
                     asdawd.Parent = game.Players.LocalPlayer.Character
                 end
             end
-        elseif gripangle == {1, "Z"} then
+        elseif gripangle == {"Z"} then
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(0,0,tonumber(gripdistantss))
@@ -360,7 +360,7 @@ do
                     asdawd.Parent = game.Players.LocalPlayer.Character
                 end
             end
-        elseif gripangle == {1, "X","Y"} or gripangle == {1, "Y","X"} then
+        elseif gripangle == {"X","Y"} or gripangle == {"Y","X"} then
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(tonumber(gripdistantss),tonumber(gripdistantss),0)
@@ -369,7 +369,7 @@ do
                     asdawd.Parent = game.Players.LocalPlayer.Character
                 end
             end 
-        elseif gripangle == {1, "Y","Z"} or gripangle == {1, "Z","Y"} then
+        elseif gripangle == {"Y","Z"} or gripangle == {"Z","Y"} then
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(0,tonumber(gripdistantss),tonumber(gripdistantss))
@@ -378,7 +378,7 @@ do
                     asdawd.Parent = game.Players.LocalPlayer.Character
                 end
             end  
-        elseif gripangle == {1, "X","Z"} or gripangle == {1, "Z","X"} then
+        elseif gripangle == {"X","Z"} or gripangle == {"Z","X"} then
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(tonumber(gripdistantss),0,tonumber(gripdistantss))
@@ -387,7 +387,7 @@ do
                     asdawd.Parent = game.Players.LocalPlayer.Character
                 end
             end  
-        elseif  gripangle == {1, "X","Y","Z"} or gripangle == {1, "Z","Y","X"} or gripangle == {1, "X","Z","Y"} or gripangle == {1, "Y","Z","X"} then
+        elseif  gripangle == {"X","Y","Z"} or gripangle == {"Z","Y","X"} or gripangle == {"X","Z","Y"} or gripangle == {"Y","Z","X"} then
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(tonumber(gripdistantss),tonumber(gripdistantss),tonumber(gripdistantss))
@@ -417,9 +417,9 @@ do
             end
         })
 
-        Tabs.loclal:AddButton({
-            Title = "Button",
-            Description = "Very important button",
+        Tabs.Main:AddButton({
+            Title = "Reset",
+            Description = "",
             Callback = function()
                 if resetmethod == "Normal Reset" then
                     game.Players.LocalPlayer.Character.Humanoid.Health = 0
