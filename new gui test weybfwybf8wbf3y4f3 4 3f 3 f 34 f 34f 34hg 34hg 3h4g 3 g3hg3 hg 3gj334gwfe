@@ -308,15 +308,17 @@ do
         Values = {"X", "Y", "Z"},
         Multi = true,
         Default = {""},
-        MultiDropdown:OnChanged(function(Value)
-            local Values = {}
-            for Value, State in next, Value do
-                table.insert(Values, Value)
-            end
-            print("Mutlidropdown changed:", table.concat(Values, ", "))
-        end)
+        Callback = function()
+            MultiDropdown:OnChanged(function(Value)
+                local Values = {}
+                for Value, State in next, Value do
+                    table.insert(Values, Value)
+                end
+                print("Mutlidropdown changed:", table.concat(Values, ", "))
+            end)
+        end
     })
-
+    
     local Input = Tabs.tool:AddInput("Input", {
         Title = "Distant",
         Default = "",
