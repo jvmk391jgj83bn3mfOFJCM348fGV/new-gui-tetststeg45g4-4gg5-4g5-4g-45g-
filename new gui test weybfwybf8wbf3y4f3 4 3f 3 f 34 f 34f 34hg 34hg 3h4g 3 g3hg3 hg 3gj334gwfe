@@ -311,7 +311,7 @@ do
         Callback = function()
             local gripangle = {}
             for Value, State in next, Value do
-                table.insert(gripangle, Value)
+                table.insert(Values, gripangle)
             end
         end
     })
