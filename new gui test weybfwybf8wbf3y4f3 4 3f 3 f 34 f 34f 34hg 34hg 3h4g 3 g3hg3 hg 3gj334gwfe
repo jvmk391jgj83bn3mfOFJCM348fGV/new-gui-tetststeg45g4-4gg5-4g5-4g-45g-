@@ -325,7 +325,7 @@ do
     })
 
     Tabs.tool:AddButton({
-        Title = "Increase Grip Tools",
+        Title = "Increase Grip Tools (Equip Tool First)",
         Description = "",
         Callback = function()
             if gripangle == {"X"} then
