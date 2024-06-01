@@ -158,6 +158,9 @@ do
         Values = {"None", "Bomb", "Bow", "Laptop", "Iphone", "Ipad", "FlashLight", "Money", "Paper", "Present", "Couch", "Sniper", "Assault", "Shotgun", "GlockBrown", "Glock", "Taser", "SWATShield", "Milk", "FishingRod", "FireX", "Sign", "Box", "Paperbag", "PaperbagFire", "Tree", "Crystals", "Crystal"},
         Multi = false,
         Default = "None",
+        Callback = function(kkk)
+            toolselcted = kkk
+        end
     })
 
     local Input = Tabs.tool:AddInput("Input", {
