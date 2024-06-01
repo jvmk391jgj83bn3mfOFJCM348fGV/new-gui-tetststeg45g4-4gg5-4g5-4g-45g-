@@ -308,9 +308,13 @@ do
         Values = {"X", "Y", "Z"},
         Multi = true,
         Default = {""},
-        Callback = function(wiejfijwfijdf)
-            gripangle = wiejfijwfijdf
-        end
+        MultiDropdown:OnChanged(function(Value)
+            local Values = {}
+            for Value, State in next, Value do
+                table.insert(Values, Value)
+            end
+            print("Mutlidropdown changed:", table.concat(Values, ", "))
+        end)
     })
 
     local Input = Tabs.tool:AddInput("Input", {
