@@ -311,11 +311,11 @@ do
     })
 
     MultiDropdown:OnChanged(function(Value)
-        local Values = {}
+        local gripangle = {}
         for Value, State in next, Value do
-            table.insert(Values, Value)
+            table.insert(gripangle, Value)
         end
-        print("Mutlidropdown changed:", table.concat(Values, ", "))
+        print("Mutlidropdown changed:", table.concat(gripangle, ", "))
     end)
     
     local Input = Tabs.tool:AddInput("Input", {
