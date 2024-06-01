@@ -133,7 +133,7 @@ do
                                 end
                             end
                             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(99999,-475,99999)
-                            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false                        end return
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false                        end
                     },
                     {
                         Title = "Cancel",
