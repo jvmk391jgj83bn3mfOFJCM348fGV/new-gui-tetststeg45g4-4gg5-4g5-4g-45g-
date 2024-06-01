@@ -23,7 +23,7 @@ local Window = Fluent:CreateWindow({
     Title = "F0rtuit0us Hub",
     SubTitle = "Made By TROLL GUI MAKER",
     TabWidth = 160,
-    Size = UDim2.fromOffset(380, 260),
+    Size = UDim2.fromOffset(480, 360),
     Acrylic = false,
     Theme = "Dark",
     MinimizeKey = Enum.KeyCode.RightControl
@@ -308,7 +308,7 @@ do
     })
 
     MultiDropdown:OnChanged(function(Value)
-        local Values = {}
+        local gripangle = {}
         for Value, State in next, Value do
             table.insert(gripangle, Value)
         end
