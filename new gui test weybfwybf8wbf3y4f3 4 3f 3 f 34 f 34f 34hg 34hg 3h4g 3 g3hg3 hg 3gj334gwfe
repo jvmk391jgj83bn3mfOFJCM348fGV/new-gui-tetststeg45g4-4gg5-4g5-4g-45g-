@@ -319,7 +319,8 @@ do
         Placeholder = "Placeholder",
         Numeric = true,
         Finished = true,
-        Callback = function(gripdistantss)
+        Callback = function(acsawdasd)
+            gripdistantss = acsawdasd
         end
     })
 
