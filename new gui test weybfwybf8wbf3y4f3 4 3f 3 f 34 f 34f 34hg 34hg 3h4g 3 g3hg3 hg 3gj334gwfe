@@ -308,9 +308,9 @@ do
     })
 
     MultiDropdown:OnChanged(function(Value)
-        local gripangle = {}
-        for Value, State in next, Value do
-            table.insert(gripangle, Value)
+        local Values = {}
+        for gripangle, State in next, gripangle do
+            table.insert(Values, gripangle)
         end
     end)
 
