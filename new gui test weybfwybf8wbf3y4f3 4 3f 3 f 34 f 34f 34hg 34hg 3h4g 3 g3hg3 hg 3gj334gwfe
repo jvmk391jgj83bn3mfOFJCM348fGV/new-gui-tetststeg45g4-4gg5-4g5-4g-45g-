@@ -188,8 +188,11 @@ do
             wait(0.1)
             if game:GetService("Workspace"):FindFirstChild("Camera") then
                 game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(999999999, -495, 999999999, 1, 0, 0, 0, 1, 0, 0, -10, 1)
-                game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+                for m=1,2 do task.wait()
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.414, -490, 0.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
+                    end
+                    task.wait(0.2)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
             wait(0.5)
             for aidj,afh in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if afh.Name == toolselcted == false then
@@ -306,9 +309,9 @@ do
         Multi = true,
         Default = {""},
         Callback = function()
-            local Values = {}
-            for gripangle, State in next, gripangle do
-                table.insert(Values, gripangle)
+            local gripangle = {}
+            for Value, State in next, Value do
+                table.insert(gripangle, Value)
             end
         end
     })
