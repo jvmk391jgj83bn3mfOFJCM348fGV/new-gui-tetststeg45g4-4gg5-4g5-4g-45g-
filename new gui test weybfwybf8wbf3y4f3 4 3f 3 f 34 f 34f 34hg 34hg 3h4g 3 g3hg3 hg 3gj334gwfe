@@ -333,7 +333,7 @@ do
         Title = "Increase Grip Tools (Equip Tool First)",
         Description = "",
         Callback = function()
-            if gripangle == {"X"} then
+            if gripangle == "X" then
                 for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                     if asdawd:IsA("Tool") then
                         asdawd.Grip = CFrame.new(tonumber(gripdistantss),0,0)
@@ -342,7 +342,7 @@ do
                         asdawd.Parent = game.Players.LocalPlayer.Character
                     end
                 end
-        elseif gripangle == {"Y"} then
+        elseif gripangle == "Y" then
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(0,tonumber(gripdistantss),0)
@@ -351,7 +351,7 @@ do
                     asdawd.Parent = game.Players.LocalPlayer.Character
                 end
             end
-        elseif gripangle == {"Z"} then
+        elseif gripangle == "Z" then
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(0,0,tonumber(gripdistantss))
@@ -360,7 +360,7 @@ do
                     asdawd.Parent = game.Players.LocalPlayer.Character
                 end
             end
-        elseif gripangle == {"X","Y"} or gripangle == {"Y","X"} then
+        elseif gripangle == "X","Y" or gripangle == "Y","X" then
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(tonumber(gripdistantss),tonumber(gripdistantss),0)
@@ -369,7 +369,7 @@ do
                     asdawd.Parent = game.Players.LocalPlayer.Character
                 end
             end 
-        elseif gripangle == {"Y","Z"} or gripangle == {"Z","Y"} then
+        elseif gripangle == "Y","Z" or gripangle == "Z","Y" then
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(0,tonumber(gripdistantss),tonumber(gripdistantss))
@@ -378,7 +378,7 @@ do
                     asdawd.Parent = game.Players.LocalPlayer.Character
                 end
             end  
-        elseif gripangle == {"X","Z"} or gripangle == {"Z","X"} then
+        elseif gripangle == "X","Z" or gripangle == "Z","X" then
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(tonumber(gripdistantss),0,tonumber(gripdistantss))
@@ -387,7 +387,7 @@ do
                     asdawd.Parent = game.Players.LocalPlayer.Character
                 end
             end  
-        elseif  gripangle == {"X","Y","Z"} or gripangle == {"Z","Y","X"} or gripangle == {"X","Z","Y"} or gripangle == {"Y","Z","X"} then
+        elseif  gripangle == "X","Y","Z" or gripangle == "Z","Y","X" or gripangle == "X","Z","Y" or gripangle == "Y","Z","X" then
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(tonumber(gripdistantss),tonumber(gripdistantss),tonumber(gripdistantss))
@@ -399,6 +399,37 @@ do
         end
         end
     })
+
+        --[[LocalPlayer Tab Function]]
+
+        Tabs.loclal:AddParagraph({
+            Title = "Reset Character",
+            Content = ""
+        })
+
+        local Dropdown = Tabs.loclal:AddDropdown("Dropdown", {
+            Title = "Reset Method",
+            Values = {"Normal Reset", "Remove Character"},
+            Multi = false,
+            Default = 1,
+            Callback = function(dfvsdv)
+                resetmethod = dfvsdv
+            end
+        })
+
+        Tabs.Main:AddButton({
+            Title = "Button",
+            Description = "Very important button",
+            Callback = function()
+                if resetmethod == "Normal Reset" then
+                    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+                    wait()
+                    game.Players.LocalPlayer.Character.Humanoid.Health = -math.huge
+                elseif resetmethod == "Remove Character" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(99999999,-475,-99999999)
+                end
+            end
+        })
 
 end
 
