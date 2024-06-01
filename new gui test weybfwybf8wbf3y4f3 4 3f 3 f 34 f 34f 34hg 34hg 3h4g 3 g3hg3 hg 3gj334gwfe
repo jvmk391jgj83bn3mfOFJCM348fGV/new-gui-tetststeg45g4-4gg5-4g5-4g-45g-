@@ -133,7 +133,7 @@ do
                                 end
                             end
                             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(99999,-475,99999)
-                            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false                        end
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false                        end return
                     },
                     {
                         Title = "Cancel",
@@ -164,7 +164,7 @@ do
         Title = "Dupe Amount",
         Default = "",
         Placeholder = "Placeholder",
-        Numeric = true,
+        Numeric = false,
         Finished = true,
         Callback = function(wfweasdccx)
             dupeamot = tonumber(wfweasdccx)
