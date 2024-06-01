@@ -310,9 +310,8 @@ do
     MultiDropdown:OnChanged(function(Value)
         local Values = {}
         for Value, State in next, Value do
-            table.insert(Values, Value)
+            table.insert(gripangle, Value)
         end
-        gripangle = Values
     end)
 
     local Input = Tabs.tool:AddInput("Input", {
@@ -378,6 +377,15 @@ do
             for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                 if asdawd:IsA("Tool") then
                     asdawd.Grip = CFrame.new(tonumber(gripdistantss),0,tonumber(gripdistantss))
+                    asdawd.Parent = game.Players.LocalPlayer.Backpack
+                    wait()
+                    asdawd.Parent = game.Players.LocalPlayer.Character
+                end
+            end  
+        elseif  gripangle == {"X","Y","Z"} or gripangle == {"Z","Y","X"} or gripangle == {"X","Z","Y"} or gripangle == {"Y","Z","X"} then
+            for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
+                if asdawd:IsA("Tool") then
+                    asdawd.Grip = CFrame.new(tonumber(gripdistantss),tonumber(gripdistantss),tonumber(gripdistantss))
                     asdawd.Parent = game.Players.LocalPlayer.Backpack
                     wait()
                     asdawd.Parent = game.Players.LocalPlayer.Character
