@@ -305,14 +305,13 @@ do
         Values = {"X", "Y", "Z"},
         Multi = true,
         Default = {""},
-    })
-
-    MultiDropdown:OnChanged(function(Value)
-        local Values = {}
-        for gripangle, State in next, gripangle do
-            table.insert(Values, gripangle)
+        Callback = function()
+            local Values = {}
+            for gripangle, State in next, gripangle do
+                table.insert(Values, gripangle)
+            end
         end
-    end)
+    })
 
     local Input = Tabs.tool:AddInput("Input", {
         Title = "Distant",
