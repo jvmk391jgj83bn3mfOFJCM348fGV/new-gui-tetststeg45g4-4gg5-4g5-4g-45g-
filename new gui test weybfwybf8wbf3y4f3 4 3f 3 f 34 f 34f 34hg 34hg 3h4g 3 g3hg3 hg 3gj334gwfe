@@ -167,7 +167,7 @@ do
         Title = "Dupe Amount",
         Default = "",
         Placeholder = "Placeholder",
-        Numeric = false,
+        Numeric = true,
         Finished = true,
         Callback = function(wfweasdccx)
             dupeamot = tonumber(wfweasdccx)
