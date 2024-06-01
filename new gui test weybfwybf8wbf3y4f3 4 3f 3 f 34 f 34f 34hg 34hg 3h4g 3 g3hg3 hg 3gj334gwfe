@@ -166,7 +166,7 @@ do
     local Input = Tabs.tool:AddInput("Input", {
         Title = "Dupe Amount",
         Default = "",
-        Placeholder = "Placeholder",
+        Placeholder = "Number Only",
         Numeric = true,
         Finished = true,
         Callback = function(wfweasdccx)
@@ -307,7 +307,7 @@ do
         Description = "You can select multiple angles.",
         Values = {"X", "Y", "Z"},
         Multi = true,
-        Default = {""},
+        Default = {"X"},
     })
 
     MultiDropdown:OnChanged(function(Value)
@@ -321,7 +321,7 @@ do
     local Input = Tabs.tool:AddInput("Input", {
         Title = "Distant",
         Default = "",
-        Placeholder = "Placeholder",
+        Placeholder = "Number Only",
         Numeric = true,
         Finished = true,
         Callback = function(acsawdasd)
@@ -333,7 +333,7 @@ do
         Title = "Increase Grip Tools (Equip Tool First)",
         Description = "",
         Callback = function()
-            if gripangle == {"1", "X"} then
+            if gripangle == {"X"} then
                 for dfbd,asdawd in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
                     if asdawd:IsA("Tool") then
                         asdawd.Grip = CFrame.new(tonumber(gripdistantss),0,0)
